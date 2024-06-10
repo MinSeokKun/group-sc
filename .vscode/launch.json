@@ -9,6 +9,16 @@
             "projectName": "sbb",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-SscApplication<ssc>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "kr.inflearn.ssc.SscApplication",
+            "projectName": "ssc",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
         }
     ]
 }

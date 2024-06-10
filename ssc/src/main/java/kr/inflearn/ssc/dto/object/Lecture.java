@@ -8,16 +8,15 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-public class User {
-    
+public class Lecture {
     @Id
-    private String email;
+    int lecId;
 
-    private String password;
+    String teacherName;
 
-    private String nickname;
+    String lecName;
 
-    private String tellNumber;
+    int studentCount;
 
-    private String profileImage;
+    int reviewCount;
 }
