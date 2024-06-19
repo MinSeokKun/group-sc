@@ -1,35 +1,34 @@
 package kr.inflearn.ssc.dto.object;
 
-import java.util.Set;
+import java.time.LocalDateTime;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.ManyToOne;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
 @Entity
-public class User {
+public class Note {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private long noteId;
+    
+    private String noteContent;
 
-    private String email;
+    @ManyToOne
+    Lecture lecture;
 
-    private String password;
+    @ManyToOne
+    User user;
 
-    private String userName;
+    @ManyToOne
+    Video video;
 
-    private String tellNumber;
-
-    private String profileImage;
-
-    @OneToMany
-    private Set<Lecture> lec_list;
-
+    private LocalDateTime createDate;
 }
