@@ -1,6 +1,8 @@
 package kr.inflearn.ssc.dto.object;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.Getter;
 import lombok.Setter;
@@ -10,13 +12,15 @@ import lombok.Setter;
 @Entity
 public class Lecture {
     @Id
-    int lecId;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long Id;
 
-    String teacherName;
+    private String teacherName;
 
-    String lecName;
+    private String Name;
 
-    int studentCount;
+    private int studentCount;
 
-    int reviewCount;
+    private int reviewCount;
+
 }
